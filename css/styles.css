@@ -1,3 +1,13 @@
+.container {
+  width: 80%;
+  max-width:1000 px;
+  margin:0 auto;
+  overflow:hidden;
+} 
+
+
+
+
 .degradado {
   background: black;
   padding: 0px;
@@ -74,3 +84,14 @@
 .pie {
   background-color: #1c445a;
 }
+
+@media screen and (max-width: 800px){
+  .main { 
+    width:100%; }
+  }
+
+  @media screen and (max-width: 400px){
+    .container { 
+      width:100%; }
+    }
+  
