@@ -1,97 +1,100 @@
-.container {
-  width: 80%;
-  max-width:1000 px;
-  margin:0 auto;
-  overflow:hidden;
-} 
-
-
-
-
-.degradado {
-  background: black;
-  padding: 0px;
-  position: relative;
-  text-align: center;
-  width: 100%;
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.degradado img {
-  opacity: 1;
-  transition: 0.5s opacity;
+.header{
+  background-color: rgba(53,58,64,255);
 }
 
-.degradado .degradado-desc {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0px;
-  color: white;
-  font-size: 1.2em;
-  left: 0px;
-  padding: 10px 15px;
-  position: absolute;
-  transition: 0.5s padding;
-  text-align: center;
-  width: 100%;
+.cont>li>a{
+  color: gray;
+  font-size: small;
 }
 
-.degradado:hover img {
-  opacity: 0.7;
+.nav>li:last-child a{
+  color: rgb(41, 167, 68);
 }
 
-.centrado {
-  text-align: right;
-  padding: 0.5em;
+.nav-link:hover{
+  color: whitesmoke !important;
 }
 
-.textizq {
-  text-align: left;
-  padding: 0.5em;
+.botontickets{
+  background-color: rgb(41, 167, 68) !important;
+  color:white !important;
 }
 
-.TextoDer {
-  position: inherit;
-  left: 40%;
-  font-size: 1.5vw;
+.banner{
+  background: url(./imag/ba1) no-repeat center rgba(transparent); 
+  background-blend-mode:color;
+  background-size: 100% 90%;
+  height: 85vh;
+  padding: 7%;
 }
 
-.textoAbajo {
-  position: relative;
-  bottom: -35%;
+.card-text{
+  font-size: x-small;
 }
 
-.texto-negro {
+.subA{
+  background-color: rgba(254,193,7,255);
+  font-size: small;
   color: black;
+  font-weight: 500;
+  border-radius: 3px;
+  padding: 0.2rem  0.3rem;
 }
 
-.alineadoIzq {
-  text-align: left;
-  padding: 0em;
+.subB{
+  background-color: rgba(23,162,183,255);
+  font-size: small;
+  color: blanchedalmond;
+  font-weight: 500;
+  border-radius: 3px;
+  padding: 0.2rem  0.3rem;
 }
 
-.divDoble {
-  /*Color de fondo del div que contiene la imagen de honolulu y el texto */
-  background-color: #3d4447;
-  max-width: auto;
-  min-width: 300;
+.subC{
+  background-color:rgb(108, 117, 124);
+  font-size: small;
+  color: blanchedalmond;
+  font-weight: 500;
+  border-radius: 3px;
+  padding: 0.2rem 0.3rem;
 }
 
-.botonEnviar {
-  /*Redefine el color del botón enviar*/
-  background-color: #95c842 !important;
-  border-color: #95c842 !important;
+.subD{
+  background-color: rgb(221, 53, 68);
+  font-size: small;
+  color: blanchedalmond;
+  font-weight: 500;
+  border-radius: 3px;
+  padding: 0.2rem  0.4rem;
 }
 
-.pie {
-  background-color: #1c445a;
+.letterspacing{
+  letter-spacing:0.8px;
 }
 
-@media screen and (max-width: 800px){
-  .main { 
-    width:100%; }
-  }
 
-  @media screen and (max-width: 400px){
-    .container { 
-      width:100%; }
-    }
-  
+.backg{
+  background-color: rgb(53, 58, 64);
+}
+
+.letraxs{
+  font-size: x-small;
+}
+
+.btnenviar{
+  color: white !important;
+  background-color: rgb(150, 201, 62) !important;
+}
+
+.btnenviar:hover{
+  background-color: rgb(29, 114, 40) !important;
+}
+
+footer ul{
+  background: linear-gradient(0deg, rgba(53,58,64,1) 0%, rgba(31,82,113,1) 100%);
+}
