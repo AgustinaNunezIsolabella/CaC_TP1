@@ -3,9 +3,14 @@
   padding: 0;
 }
 
+.bg-graynav {
+  background-color: #353a40;
+}
+
 .header{
   background-color: rgba(53,58,64,255);
 }
+
 
 .cont>li>a{
   color: gray;
@@ -17,13 +22,17 @@
 }
 
 .nav-link:hover{
-  color: whitesmoke !important;
+    background-color: #353a40;
 }
+
+
 
 .botontickets{
   background-color: rgb(41, 167, 68) !important;
   color:white !important;
 }
+
+
 
 .banner{
   background: url(./imag/ba1) no-repeat center rgba(transparent); 
@@ -32,6 +41,7 @@
   height: 85vh;
   padding: 7%;
 }
+
 
 .card-text{
   font-size: x-small;
@@ -73,6 +83,7 @@
   padding: 0.2rem  0.4rem;
 }
 
+
 .letterspacing{
   letter-spacing:0.8px;
 }
@@ -94,6 +105,16 @@
 .btnenviar:hover{
   background-color: rgb(29, 114, 40) !important;
 }
+
+
+
+
+footer {
+  background-color: #1d3a4a;
+  margin-top: 1rem;
+}
+
+
 
 footer ul{
   background: linear-gradient(0deg, rgba(53,58,64,1) 0%, rgba(31,82,113,1) 100%);
