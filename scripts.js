@@ -1,4 +1,3 @@
-
 const datos = {
     cantidad: '',
     categoria: ''
@@ -7,12 +6,16 @@ const datos = {
 var categoria;
 datos.categoria = 'estudiante';
 
+const nombre = document.querySelector('#nombre');
+const apellido = document.querySelector('#apellido');
+const email = document.querySelector('#email');
 const cantidad = document.querySelector('#cantidad');
 categoria = document.querySelector('#categoria');
 const totalAPagar = document.querySelector('#totalAPagar');
 const btnResumen = document.querySelector('.btnResumen');
 const btnBorrar = document.querySelector('.btnBorrar');
-const formulario = document.querySelector('.formulario');
+const formulario = document.querySelector('#formulario');
+
 
 cantidad.addEventListener('input', function(event){
     datos.cantidad = event.target.value;
@@ -45,7 +48,7 @@ btnResumen.addEventListener('click' , function(event){
     }
     totalAPagar.textContent += resultado;
     return;
-});
+   });
 
 btnBorrar.addEventListener('click' , function(event){
     event.preventDefault();
