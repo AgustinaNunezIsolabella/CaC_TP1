@@ -1,3 +1,4 @@
+
 const datos = {
     cantidad: '',
     categoria: ''
@@ -6,15 +7,28 @@ const datos = {
 var categoria;
 datos.categoria = 'estudiante';
 
-const nombre = document.querySelector('#nombre');
-const apellido = document.querySelector('#apellido');
-const email = document.querySelector('#email');
+const nombre = document.querySelector('.#nombre');
+const apellido = document.querySelector('.#apellido');
+const email = document.querySelector('.#email');
 const cantidad = document.querySelector('#cantidad');
 categoria = document.querySelector('#categoria');
 const totalAPagar = document.querySelector('#totalAPagar');
 const btnResumen = document.querySelector('.btnResumen');
 const btnBorrar = document.querySelector('.btnBorrar');
 const formulario = document.querySelector('#formulario');
+
+
+let control =null;
+cantidad.addEventListener('keyup', (e) => {
+    const valor = Number(e.target.value);
+
+    if (isNaN(valor)) alert('Solo se permite ingresar numeros positivos.')
+    if (valor < 0) alert('No se permiten numeros negativos.')
+    if (valor <= 0) e.target.value =''
+})
+
+
+
 
 
 cantidad.addEventListener('input', function(event){
