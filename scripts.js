@@ -1,74 +1,72 @@
 
 const datos = {
-    cantidad: '',
-    categoria: ''
+    quantity: '',
+    category: ''
 };
 
-var categoria;
-datos.categoria = 'estudiante';
+var category;
+datos.category = 'estudiante';
 
-const nombre = document.querySelector('.#nombre');
-const apellido = document.querySelector('.#apellido');
-const email = document.querySelector('.#email');
-const cantidad = document.querySelector('#cantidad');
-categoria = document.querySelector('#categoria');
-const totalAPagar = document.querySelector('#totalAPagar');
-const btnResumen = document.querySelector('.btnResumen');
-const btnBorrar = document.querySelector('.btnBorrar');
-const formulario = document.querySelector('#formulario');
+const firstname = document.querySelector('#name');
+const surname = document.querySelector('#surname');
+const email = document.querySelector('#email');
+const quantity = document.querySelector('#quantity');
+category = document.querySelector('#category');
+const totaltopay = document.querySelector('#totaltopay');
+const btnsummary = document.querySelector('.btnsummary');
+const btndelete = document.querySelector('.btndelete');
+const purchaseform = document.querySelector('#purchaseform');
 
 
 let control =null;
-cantidad.addEventListener('keyup', (e) => {
-    const valor = Number(e.target.value);
+quantity.addEventListener('keyup', (e) => {
+    const numvalue = Number(e.target.value);
+    if (isNaN(numvalue) || !Number.isInteger(numvalue)) alert('Solo se permite ingresar numeros enteros y positivos.')
+    if (numvalue <= 0) e.target.value =''
 
-    if (isNaN(valor)) alert('Solo se permite ingresar numeros positivos.')
-    if (valor < 0) alert('No se permiten numeros negativos.')
-    if (valor <= 0) e.target.value =''
 })
 
 
 
-
-
-cantidad.addEventListener('input', function(event){
-    datos.cantidad = event.target.value;
-    console.log("Cantidad: " + event.target.value + " guardada");
+quantity.addEventListener('input', function(event){
+    datos.quantity = event.target.value;
+    console.log("quantity: " + event.target.value + " guardada");
 });
 
-categoria.addEventListener('change', function(event){
-    datos.categoria = event.target.value;
-    console.log("Categoria: " + event.target.value + " guardada");
+category.addEventListener('change', function(event){
+    datos.category = event.target.value;
+    console.log("category: " + event.target.value + " guardada");
 });
 
-btnResumen.addEventListener('click' , function(event){
+btnsummary.addEventListener('click' , function(event){
     event.preventDefault();
-    const {cantidad, categoria} = datos;
+    const {quantity, category} = datos;
     var resultado = 0;    
     var indice = 0;
-    indice = totalAPagar.textContent.indexOf('$');
-    totalAPagar.textContent = totalAPagar.textContent.substring(0, indice+1);
-    if(categoria == 'estudiante'){
-        resultado = (200*cantidad)*0.2;
-        console.log("La categoria seleccionada es (E): " + categoria);
+    indice = totaltopay.textContent.indexOf('$');
+    totaltopay.textContent = totaltopay.textContent.substring(0, indice+1);
+    if(category == 'estudiante'){
+        resultado = (200*quantity)*0.2;
+        console.log("La category seleccionada es (E): " + category);
     } 
-    else if(categoria == 'trainee'){
-        resultado = (200*cantidad)*0.5;
-        console.log("La categoria seleccionada es (T): " + categoria);
+    else if(category == 'trainee'){
+        resultado = (200*quantity)*0.5;
+        console.log("La category seleccionada es (T): " + category);
     }
-    else if(categoria == 'junior'){
-        resultado = (200*cantidad)*0.85;
-        console.log("La categoria seleccionada es (J): " + categoria);
+    else if(category == 'junior'){
+        resultado = (200*quantity)*0.85;
+        console.log("La category seleccionada es (J): " + category);
     }
-    totalAPagar.textContent += resultado;
+    totaltopay.textContent += resultado;
     return;
    });
 
-btnBorrar.addEventListener('click' , function(event){
+btndelete.addEventListener('click' , function(event){
     event.preventDefault();
     var indice = 0;
-    indice = totalAPagar.textContent.indexOf('$');
-    totalAPagar.textContent = totalAPagar.textContent.substring(0, indice+1);
-    formulario.reset();
+    indice = totaltopay.textContent.indexOf('$');
+    totaltopay.textContent = totaltopay.textContent.substring(0, indice+1);
+    purchaseform.reset();
+    
     return;
 });
