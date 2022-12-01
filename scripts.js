@@ -19,13 +19,30 @@ const purchaseform = document.querySelector('#purchaseform');
 
 
 let control =null;
+
+//document.getElementById('email').addEventListener('input', function() {
+//    campo = target;
+  //  valido = document.getElementById('emailOK');
+    //    
+   // emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+   // if (emailRegex.test(campo.value)) {
+    //  valido.innerText = "válido";
+    //} else {
+    //  valido.innerText = "incorrecto";
+   // }
+//});
+//<p>
+   // Email:
+   // <input id="email">
+    //<span id="emailOK"></span>
+//</p>
+
 quantity.addEventListener('keyup', (e) => {
     const numvalue = Number(e.target.value);
     if (isNaN(numvalue) || !Number.isInteger(numvalue)) alert('Solo se permite ingresar numeros enteros y positivos.')
     if (numvalue <= 0) e.target.value =''
 
-})
-
+});
 
 
 quantity.addEventListener('input', function(event){
@@ -61,12 +78,8 @@ btnsummary.addEventListener('click' , function(event){
     return;
    });
 
-btndelete.addEventListener('click' , function(event){
-    event.preventDefault();
-    var indice = 0;
-    indice = totaltopay.textContent.indexOf('$');
-    totaltopay.textContent = totaltopay.textContent.substring(0, indice+1);
-    purchaseform.reset();
-    
-    return;
+btndelete.addEventListener("click", function(event) {
+    purchaseform.delete();
+
 });
+    
